@@ -18,8 +18,12 @@ public class UserManagementMicroservice {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("http://localhost:4200")
-						.allowedMethods("*").allowedHeaders("*");
+				registry.addMapping("/**")
+						.allowedOrigins("http://localhost:4200")
+						.allowedOrigins("https://fromzero-77cf7.web.app")
+						.allowedMethods("*")
+						.allowCredentials(true)
+						.allowedHeaders("*");
 			}
 		};
 	}
