@@ -19,8 +19,7 @@ public class UserManagementMicroservice {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**")
-						.allowedOrigins("http://localhost:4200")
-						.allowedOrigins("https://fromzero-77cf7.web.app")
+						.allowedOrigins("http://localhost:4200", "https://fromzero-77cf7.web.app")
 						.allowedMethods("*")
 						.allowCredentials(true)
 						.allowedHeaders("*");
