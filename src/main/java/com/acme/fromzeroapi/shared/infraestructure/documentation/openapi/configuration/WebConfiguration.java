@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Profile("!test")
 public class WebConfiguration {
 
-    @Bean
+    @Bean(name = "webCorsConfigurerFZero")
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
